@@ -1,0 +1,93 @@
+.pricing {
+    padding: 60px 100px;
+    .pricing-head{
+        font-family: "Jost", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        height: auto;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #37517e;
+    }
+    .line {
+        display: inline-block;
+        width: 10%;
+        border-top: 0.2px solid #ddd;
+        position: relative;
+        top: 6px;
+        // padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    .line::after {
+        display: block;
+        content: "";
+        width: 26%;
+        position: relative;
+        left: 36%;
+        border-top: 2px solid #47b2e4;
+    }
+    .pricing-container {
+        display:flex;
+        flex-wrap: wrap;
+        .price-card {
+            width: 31%;
+            margin: 16px 20px 20px 0;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border:none;
+            border-top: 4px solid #fff;
+            .card-body {
+                padding: 60px 40px;
+                text-align: left;
+                .card-title {
+                    color: #37517e;
+                    margin-bottom: 1.5rem;
+                }
+                .card-subtitle {
+                    color: #37517e;
+                    font-size: 52px;
+                    sup {
+                        font-weight: 400;
+                        font-size: 34px;
+                    }
+                }
+                .price-duration {
+                    color: #47b2e4;
+                }
+                .card-text{
+                    margin: 42px 0 32px 0;
+                    color: #999;
+                    .plan-details {
+                        display:flex;
+                        align-items: baseline;
+                        .sucess-check {
+                            color: #28a745
+                        }
+                        i {
+                            margin: 0 10px 0 0;
+                        }
+                        .plan-desc {
+                            font-family: "Open Sans", sans-serif;
+                        }
+                        .no-feature {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+                .started-btn {
+                    border-radius: 50px;
+                    border: 1px solid #47b2e4;
+                    padding: 10px 32px;
+                    color: #47b2e4;
+                    font-weight: 500;
+                }
+                .started-btn:hover, .suggested-plan {
+                    background-color: #47b2e4;
+                    color: #ffffff;
+                }
+            }
+        }
+        .suggested-card {
+            border-top-color: #47b2e4;
+        }
+    }
+}

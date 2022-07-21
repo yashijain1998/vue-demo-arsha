@@ -1,0 +1,27 @@
+<div class="portfolio">
+    <h3 class="portfolio-head">portfolio</h3>
+    <span class='line'></span>
+    <p class="portfolio-desc">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <div class="portfolio-btn">
+        <button class="btn port-btn active" @click="allImages">All</button>
+        <button class="btn port-btn" @click="appImages" >App</button>
+        <button class="btn port-btn" @click="cardImages">Card</button>
+        <button class="btn port-btn" @click="webImages" >Web</button>
+    </div>
+    <div class="img-container">
+        <span  class="my-port" v-for ="(imag,index) in portImg" :key="index" >
+            <img :src="imag.url" :alt="imag.alt" class="port-img"  >
+            <div class="img-hover">
+                <div class="img-content">
+                    <h6>{{imag.alt}}</h6>
+                    <p>{{imag.sub}}</p>
+                </div>
+                <div class="img-icon">
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-link"></i>
+                </div>
+            </div>
+        </span>
+       
+    </div>
+</div>

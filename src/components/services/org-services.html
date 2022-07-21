@@ -1,0 +1,34 @@
+<div class="services">
+    <div class="all-services">
+        <h3 class="service-head">services</h3>
+        <span class='line'></span>
+        <p class="service-desc">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <div class="service-card">
+            <div class="cards"  v-for="(cardData,index) in contentData" :keys="cardData.body" >
+                <div class="card-icon">
+                    <Icon icon="icon-park-outline:dribble" v-if="index === 0" />
+                    <Icon icon="bx:file"  v-if="index === 1"/>
+                    <Icon icon="bx:tachometer"  v-if="index === 2"/>
+                    <Icon icon="fluent:layer-20-regular"  v-if="index === 3"/>
+                </div>
+                <h4 class="card-heading">{{cardData.header}}</h4>
+                <p class="card-desc">{{cardData.body}}</p>
+                <!-- <div class="card-body">
+                  <div class="card-title"><Icon icon="icon-park-outline:dribble" /></div>
+                  <h6 class="card-subtitle mb-2 text-muted">{{cardData.header}}</h6>
+                  <p class="card-text">{{cardData.body}}</p>
+                </div> -->
+              </div>
+        </div>
+        <div class="call-action">
+            <h3 class="call-head">Call To Action</h3>
+            <div class="call-detail">
+                <p class="call-para">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="btn action-btn" >Call To Action</button>
+            </div>
+        </div>
+    </div>
+    <div class="call-services">
+
+    </div>
+</div>

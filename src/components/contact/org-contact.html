@@ -1,0 +1,91 @@
+<div class='contact'>
+    <h3 class='contact-head'>contact</h3>
+    <span class='line'></span>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <div class='contact-container'>
+        <div class='contact-details'>
+           <div class='location detail-item'>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                    <h5>Location:</h5>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                </span>
+           </div>
+           <div class='email detail-item'>
+                <i class="fa-regular fa-envelope"></i>
+                <span>
+                    <h5>Email:</h5>
+                    <p>info@example.com</p>
+                </span>
+           </div>
+           <div class='call detail-item'>
+             <i class="fa-solid fa-mobile-button"></i>
+             <span>
+                <h5>Call:</h5>
+                <p>+1 5589 55488 55s</p>
+            </span>
+           </div>
+           <div class='map'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.8950972843445!2d-73.99104838509598!3d40.69830794639095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a35da2fd673%3A0x218ed6cc00224ef8!2sAdams%20St%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2sin!4v1657992291312!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+        </div>
+        <div class='send-message'>
+           <form>
+              <div class="d-flex form-item">
+                 <div style='width: 50%; margin-right: 24px;'>
+                    <p :class ="{ 'label-error': $v.message.yourName.$error }">Your Name</p>
+                    <input type="text"
+                        v-model='message.yourName'
+                        @blur='$v.message.yourName.$touch()'
+                        :class ="{ 'input-error': $v.message.yourName.$error }"
+                    />
+                    <div v-if = '$v.message.yourName.$error' class="field-error">
+                        <small v-if="!$v.message.yourName.required" >Name is required</small>
+                        <small v-else-if="!$v.message.yourName.minLength">Name must be of minimum 3 length</small>
+                    </div>
+                </div>
+                 <div style='width: 50%'>
+                    <p :class ="{ 'label-error': $v.message.email.$error }">Your Email </p>
+                    <input type="text"
+                        v-model='message.email'
+                        @blur='$v.message.email.$touch()'
+                        :class ="{ 'input-error': $v.message.email.$error }"
+                    />
+                    <div v-if = '$v.message.email.$error' class="field-error">
+                        <small v-if="!$v.message.email.required">Email is required</small>
+                        <small v-else-if="!$v.message.email.email">Email must be valid</small>
+                    </div>
+                </div>
+              </div>
+              <div class="form-item">
+                <p :class ="{ 'label-error': $v.message.subject.$error }">Subject</p>
+                <input type="text"
+                    v-model='message.subject'
+                    @blur='$v.message.subject.$touch()'
+                    :class ="{ 'input-error': $v.message.subject.$error }"
+                />
+                <div v-if = '$v.message.subject.$error' class="field-error">
+                    <small v-if="!$v.message.subject.required">Subject is required</small>
+                    <small v-else-if="!$v.message.subject.maxLength">Subject should not exceed 30 character</small>
+                </div>
+              </div>
+              <div class="form-item">
+                <p :class ="{ 'label-error': $v.message.msg.$error }">Message</p>
+                <textarea
+                    rows="9"
+                    cols="33"
+                    v-model='message.msg'
+                    @blur='$v.message.msg.$touch()'
+                    :class ="{ 'input-error': $v.message.$error }"
+                ></textarea>
+                <div v-if = '$v.message.msg.$error' class="field-error">
+                    <small v-if="!$v.message.msg.required">Message is required</small>
+                    <small v-else-if="!$v.message.msg.maxLength">Message should not exceed 100 character</small>
+                </div>
+              </div>
+              <button class="btn started-btn">Send Message</button>
+           </form>
+        </div>
+    </div>
+    
+</div>

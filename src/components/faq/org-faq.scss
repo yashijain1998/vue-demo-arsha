@@ -1,0 +1,99 @@
+.faq {
+    padding: 60px 100px;
+    background-color: #f3f5fa;
+    .faq-head{
+        font-family: "Jost", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        height: auto;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #37517e;
+    }
+    .line {
+        display: inline-block;
+        width: 10%;
+        border-top: 0.2px solid #ddd;
+        position: relative;
+        top: 6px;
+        // padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    .line::after {
+        display: block;
+        content: "";
+        width: 26%;
+        position: relative;
+        left: 36%;
+        border-top: 2px solid #47b2e4;
+    }
+    .accordion {
+        background-color: #f3f5fa;
+        padding: 5px 120px;
+        .card {
+            background-color: #f3f5fa;
+            border: none;
+            ul {
+                padding:0px;
+            }
+            li {
+                text-decoration: none;
+                list-style-type:none;
+                margin-bottom: 10px;
+            }
+            .card-header {
+                border: none;
+                text-align: left;
+                .card-title {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 17px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    color: #37517e;
+                    .faq-icon {
+                        color: rgb(71, 178, 228);
+                        margin-right: 8px;
+                        font-size: 24px;
+                    }
+                }
+            }
+            .card-body {
+                background: #fff;
+                padding: 0 20px 20px 20px;
+                text-align: left;
+            }
+            .my-card{
+                // margin-bottom: 10px;
+                padding:20px;
+                background: #fff;
+            }
+        }
+    }
+    .accordion .card-header {
+        cursor: pointer;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            padding-right: 30px;
+            outline: none;
+        }
+        .card-title {
+            .chevron-icon {
+                float:right
+            }
+        }
+    }
+    .accordion .card-header:hover {
+        .card-title{
+            color: #47b2e4
+        }
+        
+    }
+    .accordion .card-header:after  {
+        /* symbol for "collapsed" panels */
+        color:red
+    }
+}

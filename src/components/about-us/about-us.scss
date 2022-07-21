@@ -1,0 +1,63 @@
+.about {
+    padding: 60px 0;
+    h3 {
+        font-family: "Jost", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        height: auto;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #37517e;
+    }
+    .line {
+        display: inline-block;
+        width: 10%;
+        border-top: 0.2px solid #ddd;
+        position: relative;
+        top: 6px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    .line::after {
+        display: block;
+        content: "";
+        width: 26%;
+        position: relative;
+        left: 36%;
+        border-top: 2px solid #47b2e4;
+    }
+    .about-content {
+        display:flex;
+        margin: 0 100px;
+        padding: 0 12px 60px 12px;
+        .one-content {
+            width: 50%;
+            text-align: left;
+            .double-click {
+                color: #47b2e4;
+                margin-right: 8px;
+                font-size: 20px;
+            } 
+        }
+        .two-content {
+            width: 50%;
+            .content-text {
+                text-align: left;
+            }
+            .learnmore-btn {
+                padding: 10px 32px;
+                font-size: 14px;
+                font-weight: 550;
+                text-align: center;
+                letter-spacing: 1px;
+                color: #47b2e4;
+                border: 2px solid #47b2e4;
+            }
+            .learnmore-btn:hover {
+                color: #fff;
+                background: #47b2e4;
+            }
+        }
+    }
+    
+}
