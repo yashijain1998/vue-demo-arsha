@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-expand-lg navbar-light nav-head" :class="isScroll ? 'navbar-scroll' : '' " v-if="isVissible">
+    <nav class="navbar navbar-expand-lg navbar-light nav-head" :class="isScroll ? 'navbar-scroll' : '' " v-show="isVissible">
         <a class="navbar-brand" href="#">Arsha</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -7,22 +7,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link navbar-items" href="#orgHome">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link navbar-items" href="#orgAbout">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link navbar-items" href="#orgService">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link navbar-items" href="#orgPort">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
+              <a class="nav-link navbar-items" href="#orgTeam">Team</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle navbar-items" href="#orgHome" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -33,11 +33,11 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link navbar-items" href="#orgContact">Contact</a>
             </li>
           </ul>
           <form class="form-inline">
-            <button class="btn started-btn" type="button" >Get Started</button>
+            <a class="btn started-btn navbar-items" type="button" href="#orgAbout" >Get Started</a>
           </form>
         </div>
       </nav>

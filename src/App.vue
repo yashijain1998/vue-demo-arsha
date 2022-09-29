@@ -30,14 +30,11 @@ export default {
       isShown: null
     }
   },
-  created() {
-    console.log('app started');
-  },
   methods: {
     isNavbarShow(value) {
       this.isShown = value
     }
-  }
+  },
 }
 </script>
 
