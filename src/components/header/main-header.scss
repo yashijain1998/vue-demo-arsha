@@ -1,46 +1,62 @@
-.main-head {
-    background-color: #37517e;
-    .nav-head {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 102px;
-        // position: fixed;
+@import '@/assets/styles/_helpers.scss';
+
+.nav-head {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color,black);
+    position: sticky;
+    top: 0px;
+    padding: 1rem 1rem;
+    width: 100%;
+    z-index: 99999;
+    .navbar-collapse {
+        flex-grow: 0;
     }
-    .navbar {
-        padding: 1rem 1rem;
-        .navbar-collapse {
-            flex-grow: 0;
-        }
-        .navbar-brand {
-            font-family: "Jost", sans-serif;
-            font-size: 30px;
-            font-weight: 500;
-            height: auto;
-            letter-spacing: 2px;
-            line-height: 30px;
-            text-transform: uppercase;
-        }
-        .nav-link, .navbar-brand, .started-btn {
-            color: white
-        }
-        .nav-item {
-            font-family: "Open Sans", sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-            height: 42.5px;
-            line-height: 22.5px;
-            padding-right: 12px;
-        }
-        .nav-item a:hover{
-            color: #47b2e4;
-        }   
-        .started-btn {
-            border-radius: 50px;
-            border: 2px solid #47b2e4;
-        }
-        .started-btn:hover {
-            background-color: #47b2e4;
+
+    .navbar-brand {
+        font-family: "Jost", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        height: auto;
+        letter-spacing: 2px;
+        line-height: 30px;
+        text-transform: uppercase;
+        @include media-breakpoint-up(md) {
+            margin: 0 0 0 90px;
         }
     }
-    
+
+   .nav-link {
+        color: white !important;
+    }
+    .navbar-brand,
+    .started-btn {
+        color: white;
+    }
+
+    .nav-item {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        height: 42.5px;
+        line-height: 22.5px;
+        padding-right: 12px;
+    }
+
+    .nav-item a:hover {
+        color: #47b2e4;
+    }
+
+    .started-btn {
+        border-radius: 50px;
+        border: 2px solid #47b2e4;
+    }
+
+    .started-btn:hover {
+        background-color: #47b2e4;
+    }
+}
+
+.navbar-scroll {
+    background-color: rgba(40, 58, 90, 0.9);
 }

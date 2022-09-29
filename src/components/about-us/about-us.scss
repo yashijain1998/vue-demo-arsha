@@ -1,3 +1,5 @@
+@import '@/assets/styles/_helpers.scss';
+
 .about {
     padding: 60px 0;
     h3 {
@@ -7,7 +9,7 @@
         height: auto;
         line-height: 30px;
         text-transform: uppercase;
-        color: #37517e;
+        color: var(--main-color,#47b2e4);
     }
     .line {
         display: inline-block;
@@ -28,11 +30,20 @@
     }
     .about-content {
         display:flex;
-        margin: 0 100px;
+        flex-direction: column;
         padding: 0 12px 60px 12px;
+        @include media-breakpoint-up(md) {
+            margin: 0 100px;
+            flex-direction: row;
+        }
         .one-content {
-            width: 50%;
+            width: 100%;
             text-align: left;
+            padding: 0 12px;
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                padding:0;
+            }
             .double-click {
                 color: #47b2e4;
                 margin-right: 8px;
@@ -40,9 +51,15 @@
             } 
         }
         .two-content {
-            width: 50%;
+            width: 100%;
+            padding: 24px 12px 12px;
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                padding: 0;
+            }
             .content-text {
                 text-align: left;
+                font-size: var(--text);
             }
             .learnmore-btn {
                 padding: 10px 32px;

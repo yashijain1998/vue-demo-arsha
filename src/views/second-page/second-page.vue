@@ -5,6 +5,12 @@
 <script>
 export default {
     name: 'SecondPage',
+    data() {
+    return {
+      category: 'Array',
+      optionsValue : ['Array','Queue','Priority Queue','Linked List']
+    }
+  },
 }
 </script>
 

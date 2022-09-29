@@ -1,6 +1,14 @@
+@import '@/assets/styles/_helpers.scss';
+
 .faq {
-    padding: 60px 100px;
+    padding: 60px 12px;
     background-color: #f3f5fa;
+    @include media-breakpoint-up(md) {
+        padding: 60px 36px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 60px 100px;
+    }
     .faq-head{
         font-family: "Jost", sans-serif;
         font-size: 30px;
@@ -8,7 +16,7 @@
         height: auto;
         line-height: 30px;
         text-transform: uppercase;
-        color: #37517e;
+        color: var(--main-color,#47b2e4);
     }
     .line {
         display: inline-block;
@@ -29,7 +37,9 @@
     }
     .accordion {
         background-color: #f3f5fa;
-        padding: 5px 120px;
+        @include media-breakpoint-up(xl) {
+            padding: 5px 120px;
+        }
         .card {
             background-color: #f3f5fa;
             border: none;
@@ -49,7 +59,7 @@
                     font-size: 17px;
                     line-height: 24px;
                     font-weight: 500;
-                    color: #37517e;
+                    color: var(--main-color,#47b2e4);
                     .faq-icon {
                         color: rgb(71, 178, 228);
                         margin-right: 8px;

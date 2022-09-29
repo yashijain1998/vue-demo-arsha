@@ -1,8 +1,25 @@
-<div class="d-flex"> 
-    <div>
-        <p>hfus</p>
-    </div>
-    <div>
-        <p>dydi</p>
-    </div>
+<div> 
+    <!-- <div>
+        Data Structure : {{ category }}
+      <br />
+      <select v-model="category">
+        <option value="Array">Array</option>
+        <option value="Queue">Queue</option>
+        <option value="Priority Queue">Priority Queue</option>
+        <option value="Linked List">Linked List</option>
+      </select>
+    </div> -->
+    <form>
+        <div class="form-item d-flex" style="flex-direction:column;width: 30%">
+            <input type="text"
+                v-model='category'
+            />
+            <select v-model="category">
+                <option :value="val" v-for="val of optionsValue">{{val}}</option>
+                <option value="fa-solid fa-greater-than"><i class="fa-solid fa-cloud"></i>fdf</option>
+                <!-- <option data-content="<i class='fa fa-address-book-o' aria-hidden='true'></i>Option1"></option> -->
+              </select>
+              
+        </div>
+    </form>
 </div>

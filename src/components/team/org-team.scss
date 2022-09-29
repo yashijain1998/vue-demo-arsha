@@ -1,6 +1,11 @@
+@import '@/assets/styles/_helpers.scss';
+
 .team {
-    padding: 60px 100px;
+    padding: 60px 12px;
     background-color: #f3f5fa;
+    @include media-breakpoint-up(md) {
+        padding: 60px 100px;
+    }
     .team-heading{
         font-family: "Jost", sans-serif;
         font-size: 30px;
@@ -8,7 +13,7 @@
         height: auto;
         line-height: 30px;
         text-transform: uppercase;
-        color: #37517e;
+        color: var(--main-color,#47b2e4);
     }
     .line {
         display: inline-block;
@@ -32,12 +37,16 @@
         flex-wrap: wrap;
         .team-card {
             flex-direction: row;
-            width: 47% ;
+            width: 100% ;
             padding: 12px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             border-radius: 2%;
-            margin: 26px 20px 0 0px;
+            margin: 24px 0px 0 0px;
             transition:all ease-in-out 0.4s; //upward move smoothly
+            @include media-breakpoint-up(lg) {
+                width: 47% ;
+                margin: 24px 20px 0 0px;
+            }
             .card-img {
                 width: 30%;
                 overflow: hidden;
@@ -52,7 +61,7 @@
                 flex-direction: column;
                 text-align: left;
                 .card-title {
-                    color: #37517e;
+                    color: var(--main-color,#47b2e4);
                     font-weight: 700;
                 }
                 .card-text {
@@ -72,7 +81,7 @@
                         padding:9px;
                         border-radius: 50%;
                         font-size: 13px;
-                        color: #37517e;
+                        color: var(--main-color,#47b2e4);
                         cursor: pointer;
                     }
                     i:hover {

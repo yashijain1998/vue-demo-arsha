@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <MainHeader/>
+    <MainHeader :isShown ='isShown'/>
     <OrgIntro/>
     <OrgPartner/>
-    <router-view/>
+    <router-view @isNavbarShow ='isNavbarShow'/>
     <OrgFooter/>
     <MoveTop/>
   </div>
@@ -24,17 +24,21 @@ export default {
     OrgPartner,
     OrgFooter,
     MoveTop
+  },
+  data() {
+    return {
+      isShown: null
+    }
+  },
+  created() {
+    console.log('app started');
+  },
+  methods: {
+    isNavbarShow(value) {
+      this.isShown = value
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-  /* font-family: "Open Sans", sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>
+<style lang="scss" src="./assets/styles/index.scss"></style>

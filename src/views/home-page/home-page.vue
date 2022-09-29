@@ -1,5 +1,4 @@
 <template src="./home-page.html">
-  
 </template>
 
 <script>
@@ -29,6 +28,11 @@ export default {
         OrgContact,
         OrgLetter,
         FooterTop
+    },
+    methods: {
+        isNavShow(value) {
+            this.$emit('isNavbarShow', value);
+        }
     }
 }
 </script>

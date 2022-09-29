@@ -1,15 +1,25 @@
+@import '@/assets/styles/_helpers.scss';
+
 .why-us {
     padding: 80px 0;
     display: flex;
     background-color: #f3f5fa;
+    flex-direction: column-reverse;
+    @include media-breakpoint-up(md) {
+       flex-direction: row;
+    }
     .why-first {
-        width: 50%;
+        width: 100%;
         text-align: left;
-        padding: 0 12px 0 92px;
+        padding: 0 12px 0 12px;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            padding: 0 12px 0 92px;
+        }
         h3 {
             font-weight: 400;
             font-size: 34px;
-            color: #37517e;
+            color: var(--main-color,#47b2e4);
         }
         .accordion {
             background-color: #f3f5fa;
@@ -74,8 +84,11 @@
         }
     }
     .why-second {
-        width: 50%;
+        width: 100%;
         padding: 0 12px;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+        }
         img {
             height: 100%;
             width: 100%;

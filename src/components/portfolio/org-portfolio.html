@@ -1,3 +1,4 @@
+<div class="portf">
 <div class="portfolio">
     <h3 class="portfolio-head">portfolio</h3>
     <span class='line'></span>
@@ -17,11 +18,41 @@
                     <p>{{imag.sub}}</p>
                 </div>
                 <div class="img-icon">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus" @click ='displayFullImage(imag.id)' data-toggle="modal" data-target="#exampleModalLong"></i>
                     <i class="fa-solid fa-link"></i>
                 </div>
             </div>
         </span>
        
     </div>
+</div>
+
+<div class="modal fade portfoloio-modal" id="exampleModalLong" ref='vuemodal' tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div id="carouselExampleControls" class="carousel" data-interval="false" data-wrap="false">
+                <div class="carousel-inner" >
+                  <div v-if = 'isshow' class="carousel-item" id="carouse-items" v-for ="(imag,index) in portImg" :key="index" :class="{ 'active': imag.id === currentImage }" >
+                    <img class="d-block w-100 car-img" :src="imag.url" :alt="imag.alt">
+                    <p>{{imag.alt}}</p>
+                    <p>{{currentImage === imag.id }}</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon carousel-icon " aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
 </div>

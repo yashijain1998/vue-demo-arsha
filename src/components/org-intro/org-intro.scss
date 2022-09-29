@@ -1,25 +1,43 @@
+@import '@/assets/styles/_helpers.scss';
+
 .org-section {
     display:flex;
-    padding: 0 102px;
-    background-color: #37517e;
+    padding: 10px 8%;
+    background-color: var(--main-color);
+    flex-direction: column-reverse;
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+        padding: 0 102px;
+    }
     .org-info {
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: left;
+        padding: 0 20px;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            padding: 0px;
+        }
         .head-one {
             margin: 0 0 10px 0;
-            font-size: 48px;
+            font-size: 28px;
             font-weight: 700;
-            line-height: 56px;
             color: #fff;
             font-family: "Jost", sans-serif;
+            @include media-breakpoint-up(md) {
+                font-size: 48px;
+                line-height: 56px;
+            }
         }
         .head-two {
             color: rgba(255, 255, 255, 0.6);
             margin-bottom: 50px;
-            font-size: 24px;
+            font-size: 18px;
+            @include media-breakpoint-up(md) {
+                font-size: 24px;
+            }
         }
         .org-btn {
             display: flex;
@@ -46,19 +64,28 @@
         }
     }
     .web-image {
-        width: 50%;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+        }
         .org-img {
-            height: 377.656px;
-            width: 546px;
-            animation: MoveUpDown 2s ease-in-out infinite alternate-reverse both;
-            @keyframes MoveUpDown {
-                0% {
-                    transform: translateY(10px);
+            padding: 0 0 10px 0;
+            height: 265px;
+            width: 100%;
+            @include media-breakpoint-up(md) {
+                animation: MoveUpDown 2s ease-in-out infinite alternate-reverse both;
+                height: 377.656px;
+                padding: 0;
+                @keyframes MoveUpDown {
+                    0% {
+                        transform: translateY(10px);
+                    }
+                    100% {
+                        transform: translateY(-10px);
+                    }
                 }
-                100% {
-                    transform: translateY(-10px);
-                }
-              }
+            }
+           
         }
     }
     
